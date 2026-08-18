@@ -1,0 +1,33 @@
+/*
+ * Hide Gameview Settings
+ *
+ * Hides the per-game Manage/Settings gear from the Gameview play section.
+ * Scope is intentionally limited to the game-details play section so this
+ * does not remove Steam's global Settings button.
+ *
+ * CSS Loader translates mapped Steam class names such as
+ * basicappdetailssectionstyler_PlaySection_3scbH when Valve renames hashes.
+ */
+
+/* Current/typical accessibility labels used by Steam */
+.BasicUI .basicappdetailssectionstyler_PlaySection_3scbH [aria-label="Manage"],
+.BasicUI .basicappdetailssectionstyler_PlaySection_3scbH [aria-label="Manage Game"],
+.BasicUI .basicappdetailssectionstyler_PlaySection_3scbH [aria-label="Settings"],
+.BasicUI .basicappdetailssectionstyler_PlaySection_3scbH [title="Manage"],
+.BasicUI .basicappdetailssectionstyler_PlaySection_3scbH [title="Manage Game"],
+.BasicUI .basicappdetailssectionstyler_PlaySection_3scbH [title="Settings"],
+.BasicUI .basicappdetailssectionstyler_PlaySection_3scbH [data-tooltip-text="Manage"],
+.BasicUI .basicappdetailssectionstyler_PlaySection_3scbH [data-tooltip-text="Manage Game"],
+.BasicUI .basicappdetailssectionstyler_PlaySection_3scbH [data-tooltip-text="Settings"] {
+    display: none !important;
+}
+
+/*
+ * Fallback for Steam builds that append explanatory text to the label,
+ * e.g. "Manage <game name>".
+ */
+.BasicUI .basicappdetailssectionstyler_PlaySection_3scbH [aria-label^="Manage "],
+.BasicUI .basicappdetailssectionstyler_PlaySection_3scbH [title^="Manage "],
+.BasicUI .basicappdetailssectionstyler_PlaySection_3scbH [data-tooltip-text^="Manage "] {
+    display: none !important;
+}
