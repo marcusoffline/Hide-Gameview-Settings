@@ -1,7 +1,7 @@
 {
   "name": "Hide Gameview Settings",
   "author": "Muucuusss",
-  "target": "Library",
+  "target": "Tweak",
   "version": "v1.0.0",
   "manifest_version": 9,
   "description": "Hides the Manage/Settings gear on a game's Gameview page while leaving global Steam settings alone.",
